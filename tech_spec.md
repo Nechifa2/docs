@@ -65,8 +65,9 @@ This section should set out the high-level design of the system. It should inclu
 models showing the relationship between system components and the systems and its
 environment. These might be object-models, DFD, etc. Unlike the design in the Functional
 Specification - this description must reflect the design of the system as it is demonstrated.
+
 #### 3.1 Object / Class Diagrams
- 
+! [] https://github.com/Nechifa2/third_year_project_images/blob/master/class_diagram_third_year_project.png
 ### 3.2 Context Diagram
  
 ### 3.3 Data Flow Diagram
