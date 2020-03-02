@@ -2,7 +2,6 @@
 # 0. Table of contents
 
 A table of contents with pages numbers indicated for all sections / headings should be
-
 included.
 
 # 1. Introduction
@@ -10,7 +9,6 @@ included.
 **1.1 Overview**
 
 Provides a brief (half page) overview of the system / product that was developed. Include a
-
 description of how it works with other systems (if appropriate).
 
 **1.2 Glossary**
@@ -20,35 +18,26 @@ Define and technical terms used in this document. ​ _Only include those with w
 # 2. System Architecture
 
 This section describes the high-level overview of the system architecture showing the
-
 distribution functions across (potential) system modules. Architectural components that are
-
 reused or 3rd party should be highlighted. Unlike the architecture in the Functional
-
 Specification - this description must reflect the design components of the system as it is
-
 demonstrated.
 
 # 3. High-Level Design
 
 This section should set out the high-level design of the system. It should include system
-
 models showing the relationship between system components and the systems and its
-
 environment. These might be object-models, DFD, etc. Unlike the design in the Functional
-
 Specification - this description must reflect the design of the system as it is demonstrated.
 
 # 4. Problems and Resolution
 
 This section should include a description of any major problems encountered during the
-
 design and implementation of the system and the actions that were taken to resolve them.
 
 # 5. Installation Guide
 
 This is a 1 to 2 page section which contains a step by step software installation guide. It
-
 should include a detailed description of the steps necessary to install the software, a list of all required software, components, versions, hardware, etc.
 
 ## Table of Contents
@@ -107,9 +96,7 @@ Virtual Environment - A virtual machine instance, essiantally an emulation of a 
 
 Application Program Interface - A set of functions and methods that allows the creation of programs or applications.
 
-User Interface - 
-
-Wrapper
+User Interface - The visual way in which a user and a machine system interact.
 
 # 2. System Architecture
 
@@ -124,11 +111,10 @@ The application and complete frontend of the project was fully devoloped using F
 
 When the user enters the app for the first time, they enter the home page of the app. They will see a search bar asking them to input the name of a brand, as well as a navigation bar that has the terms 'News' and 'Search up at the top of the app. If they tap into the news section of the app, they will see news articles of the day about various brands and businesses. When the user inputs a brand into the search bar, they will be taken to the results page of that analysis. If the user would like to return to the search bar or news tab, the navigation bar will have all 3 sections available so the user can either tap or slide their finger across the screen to access them. After they have inputted the brand, they will the different categories that the results and data and have been split up into. There is a category that displays a chart showing the ratio of how positive or negative the online sentiment on the brand is. The other 3 categories display other results that were acquired, with their own category names, that the user can tap into for more information. That is the complete architecture of the frontend application that the user interacts with.
 
-The architecture of the backend involves many functions and modules interacting with each other. When the user inputs the brand name, a function within Flutter sends a get request to Firebase Cloud Functions, which serves as the backend for the project. Firebase Cloud Functions automatically runs the backend code for our project using Googles' servers when one of the functions are triggered. It allows for the frontend to run smoothly and quickly, while communicating with the backend. In this case, the get request sent by the input of a brand name causes the HTTP trigger event for a Firebase Cloud Function . This Firebase Cloud Function fetches the Reddit posts and comments that are about that brand. The way the function acquires this large set of text is utlising a wrapper known as Snoowrapper on the Reddit API. The wrapper has methods that fetches the data, comments and posts without directly dealing with the endpoints of the API. When this corpus of text is acquired, the sentiment analysis is performed on this corpus of text. The Javascript module used to perform this analysis is the Sentiment module. After the corpus is analyzed and the information is retrieved, the results are returned from the function and sent back to the user
-
-
+The architecture of the backend involves many functions and modules interacting with each other. When the user inputs the brand name, a function within Flutter sends a get request to Firebase Cloud Functions, which serves as the backend for the project. Firebase Cloud Functions automatically runs the backend code for our project using Googles' servers when one of the functions are triggered. It allows for the frontend to run smoothly and quickly, while communicating with the backend. In this case, the get request sent by the input of a brand name causes the HTTP trigger event for a Firebase Cloud Function . This Firebase Cloud Function fetches the Reddit posts and comments that are about that brand. The way the function acquires this large set of text is by utlising a wrapper known as Snoowrapper on the Reddit API. The wrapper has methods that fetches the data, comments and posts without directly dealing with the endpoints of the Reddit API. When this corpus of text is acquired, the sentiment analysis is performed on this corpus of text. The Javascript module used to perform this analysis is known as Sentiment. The sentiment analysis system goes through every element of the array, each element being a string of other a post or comment, and acquires the sentiment of the whole corpus. After the corpus is analyzed and all the data is retrieved by the sentiment analysis sytem, the results are returned by the function and sent back to the user. This is how the backend of the app is structured.
 
 ### 2.2 3rd Party / Reused Architecture
+For the sake of consistency, we reused the arhitecture of the validate function that can be found within the Sentiment module. The validate function test the accuracy of the sentiment analysis that was performed by the system. Reusing it helped us ensure that our results that we were returning to the user was as accurate as possible.
 
 # 3. High-Level Design
 
@@ -213,10 +199,13 @@ When it comes to Firebase, there are different prices and limits depending on wh
 
 # 5. Installation Guide
 
-This is a 1 to 2 page section which contains a step by step software installation guide. It
-
-should include a detailed description of the steps necessary to install the software, a list of all required software, components, versions, hardware, etc.
-
 ### 5.1 Required Software, Hardware, Versions, Components
 
+- Android Version 4.1 Jelly Bean (API 16) or later
+- Android Virtual Machines Version 4.4 (API 19) or later
+
+No additional hardware or software required.
+
 ### 5.2 Step by Step Instructions
+
+In order to install the Brand Analyzer App, you can install it by clicking the link in the installApp.md within the technical_specfication repository found on the project's GitLab. As well as that, you can find the link to install the app on either of the project member's blogs. After clicking the link, your Android phone will download the application onto your device. Make sure your Android is fully up to date as issues may occur when using a device that is not fully updated with its latest version available. You will need an internet connection to access the links, to download the application and to use it as well. The application requires an internet connection as it needs to retrieve online posts and comments from the Reddit website. 
