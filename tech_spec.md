@@ -67,7 +67,7 @@ environment. These might be object-models, DFD, etc. Unlike the design in the Fu
 Specification - this description must reflect the design of the system as it is demonstrated.
 
 #### 3.1 Object / Class Diagrams
-! [] https://github.com/Nechifa2/third_year_project_images/blob/master/class_diagram_third_year_project.png
+! [] https://raw.githack.com/Nechifa2/third_year_project_images/master/class_diagram_third_year_project.jpg
 ### 3.2 Context Diagram
  
 ### 3.3 Data Flow Diagram
