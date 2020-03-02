@@ -55,9 +55,9 @@ should include a detailed description of the steps necessary to install the soft
 
 ### 1. Introduction
 
-### 1.1 Overview .................................................................................................................?
+### 1.1 Overview ..............................................................................................................................?
 
-### 1.2 Glossary ...................................................................................................................?
+### 1.2 Glossary .............................................................................................................................?
 
 ### 2. System Architecture
 
@@ -134,8 +134,6 @@ environment. These might be object-models, DFD, etc. Unlike the design in the Fu
 Specification - this description must reflect the design of the system as it is demonstrated.
 
 #### 3.1 Object / Class Diagrams
-
-! [] https://raw.githubusercontent.com/Nechifa2/third_year_project_images/master/class_diagram_third_year_project.jpg
 
 ![](https://lh3.googleusercontent.com/GPR4I4Zih3JgmgI5-gP5vRQSVr04Rv4CnDnLeeGnTkkNz-0xCYIJ4ZqiP2tI-ewALWrnpa0mEqPb-sTjuOCWqhShDUlF-pMOmQnIubdl3P0NO0ABj7dEnzTJBwbxK44ghNVl0zlI)
 
