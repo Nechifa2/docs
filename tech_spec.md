@@ -55,33 +55,33 @@ should include a detailed description of the steps necessary to install the soft
 
 ### 1. Introduction
 
-### 1.1 Overview ..............................................................................................................................?
+### 1.1 Overview ...............................................................................................................?
 
-### 1.2 Glossary .............................................................................................................................?
+### 1.2 Glossary ..................................................................................................................?
 
 ### 2. System Architecture
 
-### 2.1 Overall System Architecture ...................................................................................?
+### 2.1 Overall System Architecture ........................................................................................?
 
-### 2.2 3rd Party / Reused Architecture ..............................................................................?
+### 2.2 3rd Party / Reused Architecture ..................................................................................?
 
 ### 3. High-Level Design
 
-### 3.1 Object / Class Diagrams ..........................................................................................?
+### 3.1 Object / Class Diagrams ..............................................................................................?
 
-### 3.2 Context Diagram .....................................................................................................?
+### 3.2 Context Diagram ........................................................................................................?
 
-### 3.3 Data Flow Diagram .................................................................................................?
+### 3.3 Data Flow Diagram ........................................................................................................?
 
-### 3.4 Logical Data Structure ............................................................................................?
+### 3.4 Logical Data Structure .................................................................................................?
 
 ### 4. Problems and Resolutions
 
-### 4.1 Sentiment Analysis Issues and Solutions ................................................................?
+### 4.1 Sentiment Analysis Issues and Solutions ....................................................................?
 
-### 4.2 Application Issues and Solutions ............................................................................?
+### 4.2 Application Issues and Solutions ...............................................................................?
 
-### 4.3 Firebase Issues and Solutions ..................................................................................?
+### 4.3 Firebase Issues and Solutions .....................................................................................?
 
 ### 5. Installation Guide
 
@@ -103,34 +103,38 @@ Define the ​ **technical** ​terms used in this document. ​ _Only include t
 
 Sentiment Analysis - A system of natural language processing to identify, obtain, assess, and study information from a text.
 
-Virtual Environment -
+Virtual Environment - A virtual machine instance, essiantally an emulation of a computer system, that is running on a computer.
 
-Application Program Interface -
+Application Program Interface - A set of functions and methods that allows the creation of programs or applications.
+
+User Interface - 
+
+Wrapper
 
 # 2. System Architecture
 
 This section describes the high-level overview of the system architecture showing the
-
 distribution functions across (potential) system modules. Architectural components that are
-
 reused or 3rd party should be highlighted. Unlike the architecture in the Functional
-
-Specification - this description must reflect the design components of the system as it is
-
-demonstrated.
+Specification - this description must reflect the design components of the system as it is demonstrated.
 
 ### 2.1 Overall System Architecture
+
+The application and complete frontend of the project was fully devoloped using Flutter. The user interface, the functionality and the testing of the application was all handled using this toolkit. Flutter uses the Dart programming language which is similar in style and structure to Java or Javascript. Within the toolkit are Widgets which help with user interface design and composition. This allows for easy creation, modification and evaluation of each element of interaction within a user interface. Flutter runs in the Dart virtual machine which has its own run-time compiling and execution as well. 
+
+When the user enters the app for the first time, they enter the home page of the app. They will see a search bar asking them to input the name of a brand, as well as a navigation bar that has the terms 'News' and 'Search up at the top of the app. If they tap into the news section of the app, they will see news articles of the day about various brands and businesses. When the user inputs a brand into the search bar, they will be taken to the results page of that analysis. If the user would like to return to the search bar or news tab, the navigation bar will have all 3 sections available so the user can either tap or slide their finger across the screen to access them. After they have inputted the brand, they will the different categories that the results and data and have been split up into. There is a category that displays a chart showing the ratio of how positive or negative the online sentiment on the brand is. The other 3 categories display other results that were acquired, with their own category names, that the user can tap into for more information. That is the complete architecture of the frontend application that the user interacts with.
+
+The architecture of the backend involves many functions and modules interacting with each other. When the user inputs the brand name, a function within Flutter sends a get request to Firebase Cloud Functions, which serves as the backend for the project. Firebase Cloud Functions automatically runs the backend code for our project using Googles' servers when one of the functions are triggered. It allows for the frontend to run smoothly and quickly, while communicating with the backend. In this case, the get request sent by the input of a brand name causes the HTTP trigger event for a Firebase Cloud Function . This Firebase Cloud Function fetches the Reddit posts and comments that are about that brand. The way the function acquires this large set of text is utlising a wrapper known as Snoowrapper on the Reddit API. The wrapper has methods that fetches the data, comments and posts without directly dealing with the endpoints of the API. When this corpus of text is acquired, the sentiment analysis is performed on this corpus of text. The Javascript module used to perform this analysis is the Sentiment module. After the corpus is analyzed and the information is retrieved, the results are returned from the function and sent back to the user
+
+
 
 ### 2.2 3rd Party / Reused Architecture
 
 # 3. High-Level Design
 
 This section should set out the high-level design of the system. It should include system
-
 models showing the relationship between system components and the systems and its
-
 environment. These might be object-models, DFD, etc. Unlike the design in the Functional
-
 Specification - this description must reflect the design of the system as it is demonstrated.
 
 #### 3.1 Object / Class Diagrams
