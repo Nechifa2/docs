@@ -48,13 +48,13 @@ The name of the product developed is the “Brand Analyzer App”. The goal of t
 
 Define the ​ **technical** ​terms used in this document. ​ _Only include those with which the reader may not be familiar._
 
-Sentiment Analysis - A system of natural language processing to identify, obtain, assess, and study information from a text.
+**Sentiment Analysis** - A system of natural language processing to identify, obtain, assess, and study information from a text.
 
-Virtual Environment - A virtual machine instance, essiantally an emulation of a computer system, that is running on a computer.
+**Virtual Environment** - A virtual machine instance, essiantally an emulation of a computer system, that is running on a computer.
 
-Application Program Interface - A set of functions and methods that allows the creation of programs or applications.
+**Application Program Interface** - A set of functions and methods that allows the creation of programs or applications.
 
-User Interface - The visual way in which a user and a machine system interact.
+**User Interface** - The visual way in which a user and a machine system interact.
 
 # 2. System Architecture
 
