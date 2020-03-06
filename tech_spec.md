@@ -8,8 +8,9 @@
 ### 3. High-Level Design
 ### 3.1 Object / Class Diagrams ..............................................................................................?
 ### 3.2 Context Diagram ........................................................................................................?
-### 3.3 Data Flow Diagram ........................................................................................................?
-### 3.4 Logical Data Structure .................................................................................................?
+### 3.3 Sequence Diagram ..............................................................................................?
+### 3.4 Data Flow Diagram ........................................................................................................?
+### 3.5 Logical Data Structure .................................................................................................?
 ### 4. Problems and Resolutions
 ### 4.1 Sentiment Analysis Issues and Solutions ....................................................................?
 ### 4.2 Application Issues and Solutions ...............................................................................?
@@ -50,14 +51,17 @@ For the sake of consistency, we reused the architecture of the validate function
 ### 3.2 Context Diagram
  
 ![](https://lh5.googleusercontent.com/58UfZ9t7bWst6thb5gnrQ_cdN9x2djRKGxKVKT-n3tL0B0k1PbMRT1xSLsS_Mo0Izc_hf-bKZ6O3u9reYrVWklE94BSrTKJ5WVvro0qRWS2MsXZrYD_dLuOMrRJP3Xm3UWexz_UY)
+
+### 3.3 Sequence Diagram
+![](https://lh3.googleusercontent.com/ctiv5oKw5j_ggWnnkG2ys7njqtqocWNjtA_zkytFbA_e_7al-Gy2geNuOIdugpKVutwtb7I1zo01yNZaDnO234PEBxLM1EYt2pvQ1ts29SLOcn-ZrY26UuWd-tEK8VIbDeEyQwwD)
  
-### 3.3 Data Flow Diagram
+### 3.4 Data Flow Diagram
  
 ![](https://lh5.googleusercontent.com/tNCYAH-HQ-Qsp7k7a_g3EICfGvFPCYNFQs0W-RZgvfcK5-mbbmsOXwSvvPCxVOQmM1rCnyjUTwgOLA7igUhIwKF5vXpEB5jKunqpX9NZloSDhwVrBrNn2IqfG3Ho7DXOVY0NN9xq)
  
-### 3.4 Logical Data Structure
+### 3.5 Logical Data Structure
 Our Logical Data Structure from the Functional Specification assisted us in visualising how the data would flow throughout the whole system as we were developing it. Fortunately, even though we made changes to the system during development, we did not have to change how the data flowed through the system. The Logical Data Structure below demonstrates how data flows through the design of the system as demonstrated. The User still inputs the Brand name, the Application analyses the brand and the Results are outputted, being viewed by the User.
-![]([https://lh6.googleusercontent.com/DL9hPllT2JT5u4bkg9mX3-pn5w2huNBPF8sz5QkTNDU1i9LjFhMMP_RIuczAFvOe6fw-KBmcNDZvBp84sqY2_MXGFJzIdwsdAN0sw2C0cOxJjKW1i-64h1xdZP3HkfZK2Arm_JX7](https://lh6.googleusercontent.com/DL9hPllT2JT5u4bkg9mX3-pn5w2huNBPF8sz5QkTNDU1i9LjFhMMP_RIuczAFvOe6fw-KBmcNDZvBp84sqY2_MXGFJzIdwsdAN0sw2C0cOxJjKW1i-64h1xdZP3HkfZK2Arm_JX7))
+![](https://lh6.googleusercontent.com/DL9hPllT2JT5u4bkg9mX3-pn5w2huNBPF8sz5QkTNDU1i9LjFhMMP_RIuczAFvOe6fw-KBmcNDZvBp84sqY2_MXGFJzIdwsdAN0sw2C0cOxJjKW1i-64h1xdZP3HkfZK2Arm_JX7)
  
 # 4. Problems and Resolution
 ### 4.1 Sentiment Analysis Issues and Solutions
